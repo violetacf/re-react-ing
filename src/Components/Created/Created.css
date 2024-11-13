@@ -1,0 +1,47 @@
+.created-container {
+  /* display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  text-align: center; */
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 30pt;
+  display: flex;
+  justify-content: center;
+}
+
+.created-container a {
+  text-decoration: none;
+  font-size: 12pt;
+  align-self: center;
+  color: var(--mainColor);
+}
+.created-container a:hover {
+  color: var(--secondaryColor);
+}
+
+.created-container p {
+  font-size: 12pt;
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.react-logo {
+  width: 20pt;
+  height: 100%;
+  align-self: center;
+  animation: rotateLogo 4s linear infinite;
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

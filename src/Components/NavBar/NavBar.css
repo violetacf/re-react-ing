@@ -1,13 +1,11 @@
-@import url('https://fonts.cdnfonts.com/css/flower-powers');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
 .navbar-button {
   min-width: 100%;
   width: 200pt;
-  /* height: 32pt; */
   height: auto;
-  /* font-size: 20pt; */
-  font-size: 35pt;
-  font-family: 'Flower Powers', sans-serif;
+  font-size: 20pt;
+  font-family: 'Roboto Mono', monospace;
   border-radius: 4pt;
   border-color: var(--mainColor);
 }
@@ -38,9 +36,7 @@
 @media only screen and (max-width: 1024px) {
   .navbar-button {
     min-width: 100%;
-    /* font-size: 17pt; */
-    font-size: 30pt;
-    /* height: 30pt; */
+    font-size: 20pt;
   }
   .navbar-buttons-container {
     margin-top: 10pt;

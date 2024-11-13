@@ -4,6 +4,8 @@ import { SpanishModeProvider } from './Context/SpanishModeContext';
 import About from './Components/About/About';
 import NavBar from './Components/NavBar/NavBar';
 import Header from './Components/Header/Header';
+import CreatedBy from './Components/Created/Created';
+import ReactHooks from './Components/ReactHooks/ReactHooks';
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<About />} />
+            <Route path="react-hooks" element={<ReactHooks />} />
           </Routes>
         </BrowserRouter>
+        <CreatedBy />
       </SpanishModeProvider>
     </div>
   );
