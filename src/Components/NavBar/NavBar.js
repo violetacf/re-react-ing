@@ -8,10 +8,10 @@ export default function NavBar() {
           {' '}
           <button className="navbar-button"> Re-React-ing </button>
         </a>
-        {/* <a href="/react-hooks">
+        <a href="/react-hooks">
           {' '}
           <button className="navbar-button"> React Hooks </button>
-        </a> */}
+        </a>
         {/* <a href="/react-testing">
           {' '}
           <button className="navbar-button"> What about testing? </button>
@@ -20,6 +20,7 @@ export default function NavBar() {
           {' '}
           <button className="navbar-button"> Contact </button>
         </a> */}
+        {/* Añadir, el DOM de react, hooks, testing with unit integration and end to end */}
       </div>
     </div>
   );
