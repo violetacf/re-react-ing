@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { SpanishModeContext } from '../../Context/SpanishModeContext';
 import './NavBar.css';
 
-export default function NavBar() {
+export default function NavBar({ onMakeItReactClick }) {
   const { spanishMode } = useContext(SpanishModeContext);
 
   return (
@@ -18,6 +18,11 @@ export default function NavBar() {
           {' '}
           <button className="navbar-button"> React Hooks </button>
         </a>
+        <div>
+          <button className="navbar-button" onClick={onMakeItReactClick}>
+            {spanishMode ? 'Hazlo React-ionar' : 'Make it React'}
+          </button>
+        </div>
       </div>
     </div>
   );

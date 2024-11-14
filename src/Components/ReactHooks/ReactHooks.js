@@ -14,11 +14,19 @@ export default function ReactHooks() {
     'useDebugValue',
   ];
 
+  const baseUrl = 'https://react.dev/reference/react/';
+
   return (
     <div className="hooks-container">
       {hooks.map((hook) => (
         <div className="hook-container" key={hook}>
-          <div className="hook-text">{hook}</div>
+          <a
+            href={`${baseUrl}${hook}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="hook-text">{hook}</div>
+          </a>
         </div>
       ))}
     </div>

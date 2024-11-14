@@ -12,8 +12,8 @@ export default function About() {
             <>
               Hace tiempo que no trabajo con React, y quería refrescarme creando
               una miniaplicación que me sea útil. Además, como no he estado
-              programando mucho desde mi regreso a España, decidí hacer esto.
-              Aquí tienes lo que mi colega, ChatGPT, entiende sobre React:
+              programando mucho desde que volví a España, decidí hacer esto.
+              Aquí tienes lo que mi compi, ChatGPT, entiende sobre React:
               <br />
               <em>
                 "React es una biblioteca popular de JavaScript, desarrollada por
@@ -59,8 +59,8 @@ export default function About() {
               <em>
                 "React is like Lego for web apps. You build small pieces
                 (components) and put them together to make more complex
-                interfaces. It helps keep things fast and responsive by updating
-                only what needs to change."
+                interfaces. It helps keep things fast, updating only what needs
+                to change."
               </em>
             </>
           )}
