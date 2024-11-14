@@ -5,9 +5,6 @@ import EnglishImg from '../../Images/united-kingdom.png';
 
 function LanguageSwitch() {
   const { spanishMode, toggleSpanishMode } = useContext(SpanishModeContext);
-  const handleClick = () => {
-    toggleSpanishMode();
-  };
   return (
     <div className="language-switch">
       {!spanishMode ? (
