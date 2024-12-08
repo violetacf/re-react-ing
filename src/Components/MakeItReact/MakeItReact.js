@@ -3,10 +3,17 @@ import logo from './../../Images/react_logo.png';
 
 const MakeItReact = ({ showLogo }) => {
   const [logos, setLogos] = useState([]);
+  const timerRef = React.useRef(null);
 
   useEffect(() => {
+    console.log('showLogo changed:', showLogo);
+
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+
     if (showLogo) {
-      // Generate new logo positions
       const newLogos = [];
       for (let i = 0; i < 10; i++) {
         const randomX = Math.random() * window.innerWidth;
@@ -15,14 +22,20 @@ const MakeItReact = ({ showLogo }) => {
       }
       setLogos(newLogos);
 
-      // Clear logos after 3 seconds
-      const timer = setTimeout(() => {
+      timerRef.current = setTimeout(() => {
+        console.log('Clearing logos after 1 second');
         setLogos([]);
-      }, 3000);
-
-      // Cleanup timeout on component unmount or showLogo change
-      return () => clearTimeout(timer);
+        timerRef.current = null;
+      }, 1000);
+    } else {
+      setLogos([]);
     }
+
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+    };
   }, [showLogo]);
 
   return (
@@ -34,18 +47,18 @@ const MakeItReact = ({ showLogo }) => {
             position: 'absolute',
             top: logoPosition.y,
             left: logoPosition.x,
-            backgroundColor: 'transparent', // Make sure background is transparent
+            backgroundColor: 'transparent',
           }}
         >
           <div
             style={{
-              width: '150px', // Set width of container
-              height: '150px', // Set height of container
+              width: '150px',
+              height: '150px',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              overflow: 'hidden', // Prevent image overflow
-              backgroundColor: 'transparent', // Make sure background is transparent
+              overflow: 'hidden',
+              backgroundColor: 'transparent',
             }}
           >
             <img
@@ -54,9 +67,9 @@ const MakeItReact = ({ showLogo }) => {
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'contain', // Maintain aspect ratio without distortion
-                pointerEvents: 'none', // Prevent interaction with the image
-                backgroundColor: 'transparent', // Make sure background is transparent
+                objectFit: 'contain',
+                pointerEvents: 'none',
+                backgroundColor: 'transparent',
               }}
             />
           </div>
