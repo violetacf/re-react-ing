@@ -5,11 +5,7 @@
   --secondaryColor: rgb(42, 213, 244);
   --mainColor: #000000;
   --mainColorLight: #e0e7f0;
-  --backgroundGradient: linear-gradient(
-    to bottom,
-    #e9d8f8,
-    #cceeff
-  ); /* Light purple to light blue */
+  --backgroundGradient: linear-gradient(to bottom, #e9d8f8, #cceeff);
 }
 
 * {
