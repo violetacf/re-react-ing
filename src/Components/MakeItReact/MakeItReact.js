@@ -6,6 +6,25 @@ const MakeItReact = ({ showLogo }) => {
   const timerRef = React.useRef(null);
 
   useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes rotateLogo {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
+  useEffect(() => {
     console.log('showLogo changed:', showLogo);
 
     if (timerRef.current) {
@@ -15,7 +34,7 @@ const MakeItReact = ({ showLogo }) => {
 
     if (showLogo) {
       const newLogos = [];
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 42; i++) {
         const randomX = Math.random() * window.innerWidth;
         const randomY = Math.random() * window.innerHeight;
         newLogos.push({ x: randomX, y: randomY });
@@ -70,6 +89,7 @@ const MakeItReact = ({ showLogo }) => {
                 objectFit: 'contain',
                 pointerEvents: 'none',
                 backgroundColor: 'transparent',
+                animation: 'rotateLogo 4s linear infinite',
               }}
             />
           </div>
