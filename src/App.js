@@ -43,11 +43,10 @@ function App() {
           <Header />
           <NavBar onMakeItReactClick={handleButtonClick} />
           <Routes>
-            <Route path="/" element={<About />} />
             <Route
-              path="react-hooks"
+              path="/"
               element={
-                <ReactHooks exampleBaseRoute={exampleBaseRoute} hooks={hooks} />
+                <About exampleBaseRoute={exampleBaseRoute} hooks={hooks} />
               }
             />
             <Route

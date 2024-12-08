@@ -1,8 +1,9 @@
 import { SpanishModeContext } from '../../Context/SpanishModeContext';
+import ReactHooks from '../ReactHooks/ReactHooks';
 import './About.css';
 import React, { useContext } from 'react';
 
-export default function About() {
+export default function About({ exampleBaseRoute, hooks }) {
   const { spanishMode } = useContext(SpanishModeContext);
   return (
     <div className="about-container">
@@ -65,6 +66,9 @@ export default function About() {
             </>
           )}
         </p>
+        <div className="mb-24">
+          <ReactHooks exampleBaseRoute={exampleBaseRoute} hooks={hooks} />
+        </div>
       </div>
     </div>
   );
