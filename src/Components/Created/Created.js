@@ -7,7 +7,10 @@ export default function CreatedBy() {
   const { spanishMode } = useContext(SpanishModeContext);
 
   return (
-    <div className="fixed bottom-0 left-0 w-full text-center bg-purple-100 flex justify-center items-center m-0 p-0">
+    <div
+      className="fixed bottom-0 left-0 w-full text-center bg-purple-100 flex justify-center items-center m-0 p-0"
+      data-testid="created-by"
+    >
       <img
         className="w-5 h-auto animate-spin-fast"
         src={ReactImg}

@@ -81,6 +81,7 @@ const MakeItReact = ({ showLogo }) => {
             }}
           >
             <img
+              data-testid="logo"
               src={logo}
               alt="React Logo"
               style={{

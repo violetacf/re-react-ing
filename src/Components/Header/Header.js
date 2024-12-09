@@ -4,7 +4,7 @@ import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
 
 function Header() {
   return (
-    <div className="header-container">
+    <div className="header-container" data-testid="header">
       <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">
         <img
           src={ReactLogo}

@@ -13,7 +13,7 @@ export default function NavBar({ onMakeItReactClick }) {
   };
 
   return (
-    <div className="flex justify-center p-4">
+    <div data-testid="navbar" className="flex justify-center p-4">
       <div className="flex flex-wrap gap-4 w-full max-w-xs justify-center">
         <div className="group w-full sm:w-auto">
           <button
