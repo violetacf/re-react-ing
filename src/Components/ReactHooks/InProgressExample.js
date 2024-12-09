@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { SpanishModeContext } from '../../Context/SpanishModeContext';
 import BackButton from '../BackButton/BackButton';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-
+import Lottie from 'lottie-react';
+import workingOnIt from '../../Images/working-on-it.json';
 export default function InProgressExample({ docsBaseUrl, hook }) {
   const { spanishMode } = useContext(SpanishModeContext);
 
@@ -36,10 +36,10 @@ export default function InProgressExample({ docsBaseUrl, hook }) {
           {spanishMode ? `${hook} docs` : `${hook} docs`}
         </button>
       </a>
-      <DotLottieReact
-        src="https://lottie.host/77907add-5b9d-45ad-b5f6-f03b5641c192/LNCGSmhID9.lottie"
-        loop
-        autoplay
+      <Lottie
+        aria-label="working on it animation"
+        className="working-on-it"
+        animationData={workingOnIt}
       />
       <div>
         <BackButton />

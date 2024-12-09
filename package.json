@@ -9,6 +9,7 @@
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
     "css-select": "^5.1.0",
+    "lottie-react": "^2.4.0",
     "postcss-selector-parser": "^7.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
