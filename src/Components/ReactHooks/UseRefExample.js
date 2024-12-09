@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import BackButton from '../BackButton/BackButton';
 
 function PhoneNumberInput({ maxLength = 10 }) {
   const [input, setInput] = useState('');
@@ -93,6 +94,9 @@ export default function UseRefExample({ docsBaseUrl, hook }) {
           {hook} docs{' '}
         </button>
       </a>
+      <div>
+        <BackButton />
+      </div>
     </div>
   );
 }

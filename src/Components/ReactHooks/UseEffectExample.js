@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import BackButton from '../BackButton/BackButton';
 
 const useDebounce = (text, delay) => {
   const [debouncedText, setDebouncedText] = useState(text);
@@ -58,6 +59,9 @@ export default function UseEffectExample({ docsBaseUrl, hook }) {
           {hook} docs{' '}
         </button>
       </a>
+      <div>
+        <BackButton />
+      </div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from 'react';
 import { SpanishModeContext } from '../../Context/SpanishModeContext';
+import BackButton from '../BackButton/BackButton';
 
 export default function UseStateExample({ docsBaseUrl, hook }) {
   const { spanishMode } = useContext(SpanishModeContext);
@@ -105,6 +106,9 @@ export default function UseStateExample({ docsBaseUrl, hook }) {
           {spanishMode ? `${hook} docs` : `${hook} docs`}
         </button>
       </a>
+      <div>
+        <BackButton />
+      </div>
     </div>
   );
 }
